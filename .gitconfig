@@ -1,40 +1,30 @@
-[include]
-    path = .git-aliases/common
-    path = .git-aliases/svn
-    path = .git-aliases/extra
-    path = .git-aliases/yandex
-[color]
-    diff = auto
-    status = auto
-    branch = auto
-[color "branch"]
-    current = green reverse
-    local = green
-    remote = red
-[color "diff"]
-    meta = yellow bold
-    frag = magenta bold
-    old = red bold
-    new = green bold
-    whitespace = red reverse
-[color "status"]
-    untracked = cyan
-[svn]
-    rmdir = true
+[user]
+        name = Seyar Chapuh
+        email = seyar@yandex-team.ru
 [core]
-    safecrlf = true
-    whitespace = space-before-tab,trailing-space
+
+        excludesfile = /Users/seyar/.gitignore_global
+
+[alias]
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+
+[color]
+   diff = auto
+   status = auto
+   branch = auto
+[color "branch"]
+   current = green reverse ;текущий бранч имеет зеленый фон
+   local = green ;все локальные бранчи - зеленые
+   remote = red ;все удаленные бранчи - красные
+[color "diff"]
+   meta = yellow bold
+   frag = magenta bold
+   old = red bold
+   new = green bold
+   whitespace = red reverse
+[color "status"]
+   untracked = cyan
 [push]
-    default = tracking
-[gc]
-    auto = 0
-[branch]
-    autosetuprebase = always
-[merge]
-    tool = diffconflicts
-[mergetool "diffconflicts"]
-    cmd = diffconflicts vim $BASE $LOCAL $REMOTE $MERGED
-    trustExitCode = true
-    keepBackup = false
-[advice]
-    statushints = false
+        default = tracking
+[credential]
+        helper = cache --timeout=3600
