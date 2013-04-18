@@ -41,7 +41,7 @@ foreach( $files as $item)
 
 		if( copy($image, $fullpath.basename($image)) )
 		{
-			 echo basename($image)." - moved to ".dirname($fullpath)."\n";
+			 echo dirname($fullpath)."/$camera/".basename($image)."\n";
 			 unlink($image);
 		}
 		else
