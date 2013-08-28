@@ -1,4 +1,10 @@
 <?php
+/**
+* Сортировщик фоток по папочкам. Читает инфу из экзив данных
+* раскладывает следующим способом:
+* Год/номерМесяца-названиеМесяца/модельКамеры/file.jpg
+* @author Seyar Chapuh seyarchapuh@ya.ru
+*/
 $arguments = getopt("a::",array("help::"));
 
 if(isset($arguments['help']) ){
