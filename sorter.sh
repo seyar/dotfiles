@@ -1,7 +1,7 @@
 #!/bin/bash 
 #@depends on exiv2
 #Входная папка
-BASEDIR="./photos"
+BASEDIR="/Users/seyar/media/photos"
 #строка для грепа даты из экзива 
 STRTIME="Image timestamp" 
 #строка для грепа камеры из экзив инфы
