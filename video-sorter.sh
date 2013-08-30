@@ -1,7 +1,7 @@
 #!/bin/bash
 #@depends on exiftool
 #Входная папка
-BASEDIR="/Users/seyar/media/video"
+BASEDIR="${HOME}/media/video"
 #строка для грепа даты из экзива
 STRTIME="^Media Modify Date"
 STRTIME2="Date/Time Original"
