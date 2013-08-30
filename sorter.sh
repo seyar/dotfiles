@@ -1,12 +1,7 @@
 #!/bin/bash 
 #@depends on exiv2
 #Входная папка
-BASEDIR="."
-#Бекапный винт
-BACKUPDIR="/Volumes/Time Machine/"
-#список не вложенных jpg файлов
-#LIST=`find . -iname "*.jpg" -print0 -d 1`
-#LIST=`ls | grep -i  ".jpg"`
+BASEDIR="./photos"
 #строка для грепа даты из экзива 
 STRTIME="Image timestamp" 
 #строка для грепа камеры из экзив инфы
@@ -26,12 +21,12 @@ MONTHS[10]='10-Octovber'
 MONTHS[11]='11-November'
 MONTHS[12]='12-December'
 
-find . -iname "*.jpg" -d 2 -print0 | while read -d $'\0' F 
+find . -iname "*.jpg" -d 1 -print0 | while read -d $'\0' F 
 do
   #Год
-  YEAR=`exiv2 "$F" | grep -a "${STRTIME}" | awk '{ print $4 }' | awk -F: '{ print $1 }'` 
+  YEAR=`exiv2 "$F" | grep -a "${STRTIME}" | cut -d ':' -f2 | sed -e "s/ //g"` 
   #Месяц ведущего без нуля
-  MONTH=`exiv2 "$F" | grep -a "${STRTIME}" | awk '{ print $4 }' | awk -F: '{ print $2 }' | sed -e s/0//` 
+  MONTH=`exiv2 "$F" | grep -a "${STRTIME}" | cut -d ':' -f3 | sed -e "s/0//g"` 
   #день
   #DAY=`exiv2 "$F" | grep "${STRTIME}" | awk '{ print $4 }' | awk -F: '{ print $3 }'` 
   #модель камеры без инфы грепа и замена пробелов на слеш

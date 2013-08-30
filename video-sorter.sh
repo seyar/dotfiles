@@ -2,16 +2,9 @@
 #@depends on exiftool
 #Входная папка
 BASEDIR="./video"
-#Бекапный винт
-BACKUPDIR="/Volumes/Time Machine/"
-#список не вложенных jpg файлов
-#LIST=`find . -iname "*.jpg" -print0 -d 1`
-#LIST=`ls | grep -i  ".jpg"`
 #строка для грепа даты из экзива
 STRTIME="^Media Modify Date"
 STRTIME2="Date/Time Original"
-#строка для грепа камеры из экзив инфы
-CAMERAMODEL="Camera model"
 
 #название папок месяцами
 MONTHS[1]='1-January'
@@ -43,8 +36,8 @@ do
   YEAR=`exiftool "$F" | grep -a "${STR}" | cut -d ':' -f2 | sed -e "s/ //g"`
  
   #Месяц ведущего без нуля
-  MONTH=`exiftool "$F" | grep -a "${STR}" | cut -d ':' -f3 | sed -e s/0//` 
-  #день
+  MONTH=`exiftool "$F" | grep -a "${STR}" | cut -d ':' -f3 | sed -e s/0//g` 
+  #день. не удаляю на авось пригодится
   #DAY=`exiftool "$F" | grep "${STRTIME}" | awk '{ print $4 }' | awk -F: '{ print $3 }'` 
   NAME=`basename "$F"` 
   #папка куда перемещать
@@ -55,12 +48,3 @@ do
   echo "${DIR}/${NAME}" 
 done
 echo "Отсортировано."
-
-if [ -d "${BACKUPDIR}photos/" ]; then 
-  #забекапим на внешний винт. Все вместе с симлинкой
-  #rsync -r -L $BASEDIR "${BACKUPDIR}photos/"
-  echo "Синхронизировано с ${BACKUPDIR}"
-else
-  echo "Не синхронизировано."
-fi;
-
