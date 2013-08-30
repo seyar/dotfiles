@@ -44,12 +44,3 @@ do
   echo "${DIR}/${NAME}" 
 done
 echo "Отсортировано."
-
-if [ -d "${BACKUPDIR}photos/" ]; then 
-  #забекапим на внешний винт. Все вместе с симлинкой
-  #rsync -r -L $BASEDIR "${BACKUPDIR}photos/"
-  echo "Синхронизировано с ${BACKUPDIR}"
-else
-  echo "Не синхронизировано."
-fi;
-

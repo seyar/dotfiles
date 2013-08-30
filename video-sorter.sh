@@ -1,5 +1,5 @@
 #!/bin/bash
-#@depends on exiv2
+#@depends on exiftool
 #Входная папка
 BASEDIR="./video"
 #Бекапный винт
@@ -8,7 +8,7 @@ BACKUPDIR="/Volumes/Time Machine/"
 #LIST=`find . -iname "*.jpg" -print0 -d 1`
 #LIST=`ls | grep -i  ".jpg"`
 #строка для грепа даты из экзива
-STRTIME="^Create Date"
+STRTIME="^Media Modify Date"
 STRTIME2="Date/Time Original"
 #строка для грепа камеры из экзив инфы
 CAMERAMODEL="Camera model"
@@ -32,14 +32,20 @@ read EVENT
 
 find -E  . -iregex ".*\.(mov|3gp|mp4|avi)" -d 1 -print0 | while read -d $'\0' F 
 do
-  #Год
-  YEAR=`exiftool "$F" | grep -a "${STRTIME}" | awk '{ print $4 }' | awk -F: '{ print $1 }'` 
+  # выбираем маску для определения даты
+  if [[ `exiftool "$F" | grep -a "${STRTIME}"` ]]; then
+    STR=$STRTIME
+  else
+    STR=$STRTIME2
+  fi;
+
+  #Год обрезаем пробелы
+  YEAR=`exiftool "$F" | grep -a "${STR}" | cut -d ':' -f2 | sed -e "s/ //g"`
+ 
   #Месяц ведущего без нуля
-  MONTH=`exiftool "$F" | grep -a "${STRTIME}" | awk '{ print $4 }' | awk -F: '{ print $2 }' | sed -e s/0//` 
+  MONTH=`exiftool "$F" | grep -a "${STR}" | cut -d ':' -f3 | sed -e s/0//` 
   #день
   #DAY=`exiftool "$F" | grep "${STRTIME}" | awk '{ print $4 }' | awk -F: '{ print $3 }'` 
-  #модель камеры без инфы грепа и замена пробелов на слеш
-  #MODEL=`exiv2 "$F" | grep -a "${CAMERAMODEL}" | sed -e "s/^.*:.//" | sed "s/ /_/g"`
   NAME=`basename "$F"` 
   #папка куда перемещать
   DIR="${BASEDIR}/${YEAR}/${MONTHS[$MONTH]}/${EVENT// /_}"
