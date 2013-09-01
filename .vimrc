@@ -35,7 +35,7 @@ syntax on
 filetype plugin on
 autocmd BufNewFile,BufRead *.test.js set filetype=javascript-jasmine syntax=javascript
 autocmd BufNewFile,BufRead *.wiki set filetype=wiki syntax=wp
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree       " autostart nerdtree
 set langmenu=none                   " use english menu
 set hidden                          " don't unload buffer before switching
 set autoread                        " autoread changing of file
@@ -74,7 +74,9 @@ autocmd BufLeave * silent! :w       "   or leave buffer
 set pastetoggle=<Leader>p           " Invert paste mod
 
 " View
+set title                           " show file name in window title
 set ruler                           " show cursor position
+set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%)
 set mousehide                       " hide mouser corse in typing
 "set cursorline                      " highlight current position of cursor
 set number                          " enable row numeration
@@ -152,3 +154,140 @@ noremap k gk
 " Acronyms
 ab fucntion function
 ab retrun return
+
+" write file with sudo rules
+" command! -nargs=0 -bang WSudo :silent! w !sudo tee % &>/dev/null
+
+" map cyrillic symbols to  english
+map —ë `
+map –π q
+map —Ü w
+map —É e
+map –∫ r
+map –µ t
+map –Ω y
+map –≥ u
+map —à i
+map —â o
+map –∑ p
+map —Ö [
+map —ä ]
+map —Ñ a
+map —ã s
+map –≤ d
+map –∞ f
+map –ø g
+map —Ä h
+map –æ j
+map –ª k
+map –¥ l
+map –∂ ;
+map —ç '
+map —è z
+map —á x
+map —Å c
+map –º v
+map –∏ b
+map —Ç n
+map —å m
+map –± ,
+map —é .
+map –Å ~
+map –ô Q
+map –¶ W
+map –£ E
+map –ö R
+map –ï T
+map –ù Y
+map –ì U
+map –® I
+map –© O
+map –ó P
+map –• {
+map –™ }
+map –§ A
+map –´ S
+map –í D
+map –ê F
+map –ü G
+map –† H
+map –û J
+map –õ K
+map –î L
+map –ñ :
+map –≠ "
+map –Ø Z
+map –ß X
+map –° C
+map –ú V
+map –ò B
+map –¢ N
+map –¨ M
+map –ë <
+map –Æ >
+map ё `
+map й q
+map ц w
+map у e
+map к r
+map е t
+map н y
+map г u
+map ш i
+map щ o
+map з p
+map х [
+map ъ ]
+map ф a
+map ы s
+map в d
+map а f
+map п g
+map р h
+map о j
+map л k
+map д l
+map ж ;
+map э '
+map я z
+map ч x
+map с c
+map м v
+map и b
+map т n
+map ь m
+map б ,
+map ю .
+map Ё ~
+map Й Q
+map Ц W
+map У E
+map К R
+map Е T
+map Н Y
+map Г U
+map Ш I
+map Щ O
+map З P
+map Х {
+map Ъ }
+map Ф A
+map Ы S
+map В D
+map А F
+map П G
+map Р H
+map О J
+map Л K
+map Д L
+map Ж :
+map Э "
+map Я Z
+map Ч X
+map С C
+map М V
+map И B
+map Т N
+map Ь M
+map Б <
+map Ю >
