@@ -16,11 +16,11 @@ Bundle 'bkad/CamelCaseMotion'
 Bundle 'Marks-Browser'
 Bundle 'JavaScript-syntax'
 Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'scrooloose/snipmate-snippets'
-Bundle 'tarmolov/snipmate-snippets.vim'
-Bundle 'garbas/vim-snipmate'
+" Bundle 'MarcWeber/vim-addon-mw-utils'
+" Bundle 'tomtom/tlib_vim'
+" Bundle 'tarmolov/snipmate-snippets.vim'
+" Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
 Bundle 'tarmolov/TabLineNumbers.vim'
 Bundle 'MediaWiki-folding-and-syntax-highlight'
 Bundle 'mileszs/ack.vim'
@@ -83,6 +83,7 @@ set number                          " enable row numeration
 let &sbr = nr2char(8618).' '        " show ↪ at the beginning of wrapped lines
 set list listchars=tab:▸\ ,trail:·,extends:→,precedes:←,nbsp:×
 set background=dark
+map <C-n> :NERDTreeToggle<CR>       " shortcut for nerftree toggle
 
 "highlight OverLengthLongLongStrings ctermbg=red ctermfg=white guibg=#592929
 "match OverLengthLongLongStrings /\%101v.\+/
