@@ -16,7 +16,7 @@ Bundle 'bkad/CamelCaseMotion'
 Bundle 'Marks-Browser'
 Bundle 'JavaScript-syntax'
 Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
-Bundle 'seyar/snipmate-snippets.vim'
+Bundle 'tarmolov/snipmate-snippets.vim'
 Bundle 'msanders/snipmate.vim'
 Bundle 'tarmolov/TabLineNumbers.vim'
 Bundle 'MediaWiki-folding-and-syntax-highlight'
@@ -57,7 +57,7 @@ let mapleader = ","                 " remap <Leader> key
 set completeopt=longest,menuone     " autocompletion
 set autoindent                      " inherit indent from previous line
 "set smartindent
-set formatoptions-=o                "dont continue comments when pushing o/O
+set formatoptions-=o                " dont continue comments when pushing o/O
 set expandtab                       " convert tab to spaces
 set shiftwidth=4                    " size of tab char in spaces
 set softtabstop=4
@@ -100,7 +100,7 @@ set statusline=%<%F\ %2*%y%m%r\
             \%3*-%{&fileencoding}-
 
 " Folding
-set foldlevelstart=99               "remove folds
+set foldlevelstart=99               " remove folds
 set foldtext=v:folddashes.substitute(getline(v:foldstart),'/\\*\\\|\\*/\\\|{{{\\d\\=','','g')
 
 " Search
