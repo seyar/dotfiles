@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           MTS cleanup script
 // @author         Seyar Chapuh
-// @version        0.0.2
+// @version        0.0.3
 // @description    Filters shit
 // @include        http://mts.com.ua/*
 // @include        http://www.mts.com.ua/*
@@ -63,13 +63,14 @@ addStyleSheet(css);
 
 
 form.append('<input type="submit" value="ok"/>');
-$('#message').text("\nSeyar");
+$('#message').text($('#message').val().replace("\nSeyar",'')+"\nSeyar");
 
 var recepients = {
             seyar:  {operator:'38099', phone: '0581784'},
             evelina: {operator:'38050', phone: '1706709'},
             seyran:  {operator:'38066', phone: '8840196'},
-            mama: {operator:'38066', phone: '4129763'}
+            mama: {operator:'38066', phone: '4129763'},
+            siniu: {operator:'38050', phone: '9175699'}
         };
 var ul = document.createElement('ul');
 for(i in recepients){
@@ -78,10 +79,10 @@ for(i in recepients){
 	var link = document.createElement('a');
 	$(li).append(link);
 	$(ul).attr('id','phonebook').append(li);
-	
+
 
 	$(link).text(i).attr('href','#'+i);
-	
+
 }
 form.prepend('<br/>');
 $('table').eq(0).after(ul);
@@ -89,6 +90,5 @@ $('#phonebook li a').on('click', function(){
 		i = $(this).attr('href').replace('#','');
 		phone.val(recepients[i].phone);
 		operator.val(recepients[i].operator);
-		return false; 
+		return false;
 	});
-
