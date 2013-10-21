@@ -1,9 +1,9 @@
-#!/bin/bash 
+#!/bin/bash
 #@depends on exiv2
 #Входная папка
 BASEDIR="${HOME}/media/photos"
-#строка для грепа даты из экзива 
-STRTIME="Image timestamp" 
+#строка для грепа даты из экзива
+STRTIME="Image timestamp"
 #строка для грепа камеры из экзив инфы
 CAMERAMODEL="Camera model"
 
@@ -21,21 +21,21 @@ MONTHS[10]='10-Octovber'
 MONTHS[11]='11-November'
 MONTHS[12]='12-December'
 
-find . -iname "*.jpg" -d 1 -print0 | while read -d $'\0' F 
+find . -iname "*.jpg" -d 1 -print0 | while read -d $'\0' F
 do
   #Год
-  YEAR=`exiv2 "$F" | grep -a "${STRTIME}" | cut -d ':' -f2 | sed -e "s/ //g"` 
+  YEAR=`exiv2 "$F" | grep -a "${STRTIME}" | cut -d ':' -f2 | sed -e "s/ //g"`
   #Месяц ведущего без нуля
-  MONTH=`exiv2 "$F" | grep -a "${STRTIME}" | cut -d ':' -f3 | sed -e "s/0//g"` 
+  MONTH=`exiv2 "$F" | grep -a "${STRTIME}" | cut -d ':' -f3 | sed -e "s/0\d/$1/g"`
   #день
-  #DAY=`exiv2 "$F" | grep "${STRTIME}" | awk '{ print $4 }' | awk -F: '{ print $3 }'` 
+  #DAY=`exiv2 "$F" | grep "${STRTIME}" | awk '{ print $4 }' | awk -F: '{ print $3 }'`
   #модель камеры без инфы грепа и замена пробелов на слеш
   MODEL=`exiv2 "$F" | grep -a "${CAMERAMODEL}" | sed -e "s/^.*:.//" | sed "s/ /_/g"`
-  NAME=`basename "$F"` 
+  NAME=`basename "$F"`
   #папка куда перемещать
-  DIR="${BASEDIR}/${YEAR}/${MONTHS[$MONTH]}/${MODEL}" 
-  mkdir -p "${DIR}" 
+  DIR="${BASEDIR}/${YEAR}/${MONTHS[$MONTH]}/${MODEL}"
+  mkdir -p "${DIR}"
   mv -f "${F}" "${DIR}/${NAME}"
-  echo "${DIR}/${NAME}" 
+  echo "${DIR}/${NAME}"
 done
 echo "Отсортировано."
