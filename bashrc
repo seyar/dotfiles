@@ -131,9 +131,9 @@ alias go='git checkout '
 alias gsl='git status | less'
 alias gl='git log'
 
-alias ggom='git pull origin master' 
+alias ggom='git pull origin master'
 alias gsom='git push origin master'
-alias ggod='git pull origin dev' 
+alias ggod='git pull origin dev'
 alias gsod='git push origin dev'
 
 alias gom='git checkout master'
@@ -145,7 +145,7 @@ alias grm='git rm -r'
 alias gms='git merge --squash'
 alias gabp='git add blocks/ pages/'
 alias grsh='git reset --soft HEAD^'
-alias gh='git hi'
+alias gh='git hist'
 
 
 source ~/.bash/.git-completion.sh
@@ -173,7 +173,7 @@ complete -o default -o nospace -F _git_branch gb
      LIGHTCYAN='\033[1;36m'
      DEFAULT='\033[0m'
 
-     export PS1="\[${RED}\]\h\[${LIGHTBLUE}\]"' $(__git_ps1 "(%s) ")'"\[${GREEN}\]\w \[${DEFAULT}\] "                                                          
+     export PS1="\[${RED}\]\h\[${LIGHTBLUE}\]"' $(__git_ps1 "(%s) ")'"\[${GREEN}\]\w \[${DEFAULT}\] "
  }
 
  __set_prompt
