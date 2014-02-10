@@ -146,6 +146,8 @@ alias gms='git merge --squash'
 alias gabp='git add blocks/ pages/'
 alias grsh='git reset --soft HEAD^'
 alias gh='git hist'
+alias gd='git diff'
+alias пы='git status -s'
 
 
 source ~/.bash/.git-completion.sh
