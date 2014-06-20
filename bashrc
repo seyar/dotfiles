@@ -108,6 +108,7 @@ alias tmuxkill='tmux kill-server '
 alias bcb='bem create block'
 alias em='./node_modules/.bin/enb make'
 alias ei18n='./node_modules/.bin/enb i18n.get'
+alias св='cd'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
