@@ -148,7 +148,8 @@ alias grsh='git reset --soft HEAD^'
 alias gh='git hist'
 alias gd='git diff'
 alias пы='git status -s'
-
+alias пв='git diff'
+alias пр='git hist'
 
 source ~/.bash/.git-completion.sh
 complete -o default -o nospace -F _git_checkout go
