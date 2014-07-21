@@ -107,7 +107,9 @@ alias tmuxkill='tmux kill-server '
 
 alias bcb='bem create block'
 alias em='./node_modules/.bin/enb make'
-alias ei18n='./node_modules/.bin/enb i18n.get'
+alias ei18n='./node_modules/.bin/enb make i18n.get'
+alias js='git_cached_files=$(git diff --cached --name-only --diff-filter=ACMR | xargs echo); ./node_modules/.bin/jscs $git_cached_files'
+alias lint='git_cached_files=$(git diff --cached --name-only --diff-filter=ACMR | xargs echo); ./node_modules/.bin/jshint-groups $git_cached_files'
 alias св='cd'
 
 # enable programmable completion features (you don't need to enable
