@@ -1,13 +1,12 @@
 #!/bin/bash
-#@depends on exiftool
 #что синкаем
 BASEDIR="/Users/seyar/media"
 #Бекапный винт
-BACKUPDIR="/Volumes/Time Machine/"
+BACKUPDIR="/Volumes/FAT/"
 #в какой папке мы запустили скрипт, такую же создадим на бекапном и положим файлы
 FOLDER=${BACKUPDIR}`basename "${BASEDIR}"`
 
-if [ -d "${BACKUPDIR}" ]; then 
+if [ -d "${BACKUPDIR}" ]; then
   mkdir -p   "${FOLDER}"
   #забекапим на внешний винт. Все вместе с симлинкой
   rsync -r -L "$BASEDIR/" "${FOLDER}"
@@ -16,5 +15,4 @@ if [ -d "${BACKUPDIR}" ]; then
   echo "Синхронизировано с ${BACKUPDIR}"
 else
   echo "Не синхронизировано."
-fi;
-
+fi
