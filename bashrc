@@ -86,6 +86,7 @@ fi
 #alias l='ls -CF'
 
 alias l='ls -la'
+alias hgr='history | grep '
 
 alias mb='make -B'
 alias mcl='make clean'
@@ -122,7 +123,7 @@ fi
 export LC_ALL=ru_RU.UTF-8
 
 #alias algol='ssh algol.maps.yandex.ru'
-#alias vega='ssh vega.maps.yandex.ru'
+alias vega='ssh vega.maps.yandex.ru'
 
 alias dch='dch --distributor debian --distribution unstable'
 export EMAIL="Seyar Chapuh <seyar@yandex-team.ru>"

@@ -3,7 +3,8 @@
 #Входная папка
 BASEDIR="${HOME}/media/photos"
 #строка для грепа даты из экзива
-STRTIME="Image timestamp"
+#STRTIME="Image timestamp"
+STRTIME="Create Date"
 #строка для грепа камеры из экзив инфы
 CAMERAMODEL="Camera model"
 
@@ -24,9 +25,9 @@ MONTHS[12]='12-December'
 find . -iname "*.jpg" -d 1 -print0 | while read -d $'\0' F
 do
   #Год
-  YEAR=`exiv2 "$F" | grep -a "${STRTIME}" | cut -d ':' -f2 | sed -e "s/ //g"`
+  YEAR=`exiftool "$F" | grep -a "${STRTIME}" | cut -d ':' -f2 | sed -e "s/ //g"`
   #Месяц ведущего без нуля
-  MONTH=`exiv2 "$F" | grep -a "${STRTIME}" | cut -d ':' -f3 | sed -e "s/0//g"`
+  MONTH=`exiftool "$F" | grep -a "${STRTIME}" | cut -d ':' -f3 | sed -e "s/0//g"`
   #день
   #DAY=`exiv2 "$F" | grep "${STRTIME}" | awk '{ print $4 }' | awk -F: '{ print $3 }'`
   #модель камеры без инфы грепа и замена пробелов на слеш

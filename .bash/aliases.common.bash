@@ -9,6 +9,7 @@ alias ducks="du -cks * | sort -rn | head -n11"
 alias vim='vim -p'
 alias e='vim'
 alias grep='grep --color'
+alias rmn='rm -rf node_modules/'
 
 sdiff() {
     svn diff --no-diff-deleted $@ | colordiff | less -SR

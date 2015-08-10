@@ -1,8 +1,8 @@
 #!bash
 
-if [ -f ~/.bashrc ] && [ ! -L ~/.bashrc ]; then
-   . ~/.bashrc
-fi
+#if [ -f ~/.bashrc ] && [ ! -L ~/.bashrc ]; then
+#   . ~/.bashrc
+#fi
 
 export LC_ALL=ru_RU.UTF-8
 export LESSCHARSET=utf-8
