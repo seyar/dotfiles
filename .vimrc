@@ -247,8 +247,11 @@ set nocompatible
     silent! set clipboard+=unnamedplus
 
     " set line numbers
+    set number
     set relativenumber
-
+    set numberwidth=3
+    :highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+    
 " Status line
     function! FileSize()
         let bytes = getfsize(expand("%:p"))
