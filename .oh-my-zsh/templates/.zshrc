@@ -94,7 +94,7 @@ fi
 
 . ~/.configs/.bash/aliases.common.bash
 . ~/.configs/.bash/aliases.git.bash
-#. ~/.configs/.bash/autotmux.bash
+. ~/.configs/.bash/autotmux.bash
 
 export NVM_DIR="/Users/seyar/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
