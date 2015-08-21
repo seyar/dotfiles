@@ -204,7 +204,7 @@ set nocompatible
     set linespace=1
     " Highlight the screen line of the cursor
     " Only available when compiled with the +syntax feature
-    set cursorline
+    " set cursorline
     " Turn off cursor blinking in normal mode
     " Only available when compiled with GUI enabled
     set guicursor=n:blinkon0
@@ -241,6 +241,13 @@ set nocompatible
     " Search downwards in a directory tree
     " Only available when compiled with the +path_extra feature
     set path=.,,**
+
+    " set single clipboard
+    silent! set clipboard=unnamed
+    silent! set clipboard+=unnamedplus
+
+    " set line numbers
+    set relativenumber
 
 " Status line
     function! FileSize()
@@ -678,8 +685,8 @@ set nocompatible
     " Solarized
         syntax enable
         " http://stackoverflow.com/questions/7278267/incorrect-colors-with-vim-in-iterm2-using-solarized#comment11144700_7278548
-        let g:solarized_termcolors=16
-        set background=dark
+        let g:solarized_termcolors=256
+        set background=light
         try
             colorscheme solarized
         catch /^Vim\%((\a\+)\)\=:E185/
