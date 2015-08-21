@@ -248,7 +248,6 @@ set nocompatible
 
     " set line numbers
     set number
-    set relativenumber
     set numberwidth=3
     :highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
     
