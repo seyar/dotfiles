@@ -2,7 +2,6 @@
 export ZSH=$HOME/.oh-my-zsh
 export NODE="/Users/seyar/.nvm/v0.10.40/bin/node"
 export NPM="/Users/seyar/.nvm/v0.10.40/bin/npm"
-alias dch='dch --distributor debian --distribution unstable'
 export DEBFULLNAME="Seyar Chapuh"
 export DEBEMAIL="seyar@yandex-team.ru"
 export EMAIL="Seyar Chapuh <seyar@yandex-team.ru>"
@@ -93,6 +92,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+. ~/.configs/.bash/aliases.common.bash
 . ~/.configs/.bash/aliases.git.bash
 #. ~/.configs/.bash/autotmux.bash
 
