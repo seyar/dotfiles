@@ -2,6 +2,10 @@
 export ZSH=/Users/seyar/.oh-my-zsh
 export NODE="/Users/seyar/.nvm/v0.10.40/bin/node"
 export NPM="/Users/seyar/.nvm/v0.10.40/bin/npm"
+alias dch='dch --distributor debian --distribution unstable'
+export DEBFULLNAME="Seyar Chapuh"
+export DEBEMAIL="seyar@yandex-team.ru"
+export EMAIL="Seyar Chapuh <seyar@yandex-team.ru>"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
