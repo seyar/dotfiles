@@ -1,10 +1,5 @@
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-export NODE="/Users/seyar/.nvm/v0.10.40/bin/node"
-export NPM="/Users/seyar/.nvm/v0.10.40/bin/npm"
-export DEBFULLNAME="Seyar Chapuh"
-export DEBEMAIL="seyar@yandex-team.ru"
-export EMAIL="Seyar Chapuh <seyar@yandex-team.ru>"
+# Load all variables
+. ~/.configs/.oh-my-zsh/templates/vars
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -61,14 +56,11 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/Users/seyar/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/seyar/bin:/usr/local/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
-export LC_ALL=ru_RU.UTF-8
-export LESSCHARSET=utf-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -96,5 +88,4 @@ fi
 . ~/.configs/.bash/aliases.git.bash
 . ~/.configs/.bash/autotmux.bash
 
-export NVM_DIR="/Users/seyar/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

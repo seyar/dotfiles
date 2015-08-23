@@ -1,0 +1,15 @@
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
+
+export NVM_DIR="/Users/seyar/.nvm"
+export NODE="$NVM_DIR/v0.10.40/bin/node"
+export NPM="$NVM_DIR/v0.10.40/bin/npm"
+
+export DEBFULLNAME="Seyar Chapuh"
+export DEBEMAIL="seyar@yandex-team.ru"
+
+export PATH="/Users/seyar/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/seyar/bin:/usr/local/sbin"
+export LC_ALL=ru_RU.UTF-8
+export LESSCHARSET=utf-8
+
+export EMAIL="Seyar Chapuh <seyar@yandex-team.ru>"
