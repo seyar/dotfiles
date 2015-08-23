@@ -11,6 +11,9 @@ alias vim='vim -p'
 #alias e='vim'
 alias grep='grep --color'
 #alias rmn='rm -rf node_modules/'
+alias tn='tmux new'
+alias ta='tmux attach'
+alias tls='tmux ls'
 
 sdiff() {
     svn diff --no-diff-deleted $@ | colordiff | less -SR
