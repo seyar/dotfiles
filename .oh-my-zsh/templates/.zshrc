@@ -88,8 +88,8 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-. ~/.configs/.bash/aliases.common.bash
-. ~/.configs/.bash/aliases.git.bash
-. ~/.configs/.bash/autotmux.bash
+. ~/.configs/.zsh/aliases.common.bash
+. ~/.configs/.zsh/aliases.git.bash
+. ~/.configs/.zsh/autotmux.bash
 
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
