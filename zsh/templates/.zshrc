@@ -94,6 +94,6 @@ fi
 
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-if [ -d ~/.profile ]; then
+if [ -f ~/.profile ]; then
     . ~/.profile
 fi;

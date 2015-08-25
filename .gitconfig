@@ -1,6 +1,3 @@
-[user]
-   name = Seyar Chapuh
-   email = seyar@yandex-team.ru
 [core]
    excludesfile = /Users/seyar/.gitignore_global
 [alias]

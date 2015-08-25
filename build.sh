@@ -13,8 +13,9 @@ show_usage() {
 }
 
 # clean config files
+# + .vim
 clean() {
-    for file in .bashrc .profile .gitconfig .screenrc .vimrc .vim
+    for file in .zshrc .tmux.conf .vimrc .profile .gitconfig
     do
         rm -rf ~/$file
     done
@@ -33,6 +34,10 @@ for OPT in "$@" ; do
                 --email=*)
                     EMAIL=${OPT##*=}
                     shift ;;
+                --clean)
+                    echo "Clean old config files..."
+                    clean
+                    exit;;
                 -*)
                     echo "Illegal option"
                 ;;
@@ -44,25 +49,25 @@ done
 echo "Config setup is started..."
 echo
 
-read -p "Config builder wants to delete .bashrc, .profile, .gitconfig, .screenrc, .vimrc and .vim. Do you want to continue? (y/n)? "
+read -p "Config builder wants to delete .zshrc, .tmux.conf, .gitconfig, .vimrc and .vim. Do you want to continue? (y/n)? "
 [ "$REPLY" != "y" ] && exit
 
 echo "Clean old config files..."
 clean
 
-for file in .screenrc .vim .vimrc
-do
-    echo "Set link to $file"
-    ln -sf ~/.configs/$file ~/$file
-done
+# create symblinks
+ln -sf ~/.configs/tmux/.tmux.conf ~/.tmux.conf
+ln -sf ~/.configs/.vimrc ~/.vimrc
+ln -sf ~/.configs/zsh/templates/.zshrc ~/.zshrc
 
-echo "Install vim plugins..."
 cd ~/.configs
 git submodule init
 git submodule update
+
+echo "Install vim plugins..."
 sleep 1
-vim -c ":BundleInstall" -c ":qa"
-cd - >> /dev/null
+# vim -c ":BundleInstall" -c ":qa"
+# cd - >> /dev/null
 
 echo "Generate .profile and .gitconfig"
 
@@ -77,16 +82,15 @@ if [ -n "$NAME" ] &&  [ -n "$EMAIL" ]; then
     echo "  email = $EMAIL" >> ~/.gitconfig
 fi
 
-echo ". ~/.configs/.profile" >> ~/.profile
+# echo ". ~/.configs/.profile" >> ~/.profile
 echo "[include]" >> ~/.gitconfig
 echo "  path = .configs/.gitconfig" >> ~/.gitconfig
 
 echo "Add useful commands"
 mkdir -p ~/bin
 ln -sf ~/.configs/.bin/diffconflicts ~/bin
-
-# screen doesn't read .profile
-ln -sf ~/.profile ~/.bashrc
+# add tmux start config
+ln -sf ~/.configs/.bin/tm ~/bin
 
 echo
 echo "Config setup is finished..."
