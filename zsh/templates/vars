@@ -2,14 +2,12 @@
 export ZSH=$HOME/.configs/oh-my-zsh
 
 export NVM_DIR="/Users/seyar/.nvm"
-export NODE="$NVM_DIR/v0.10.40/bin/node"
-export NPM="$NVM_DIR/v0.10.40/bin/npm"
-
-export DEBFULLNAME="Seyar Chapuh"
-export DEBEMAIL="seyar@yandex-team.ru"
+if [ -d "$NVM_DIR" ]; then
+    export NODE="$NVM_DIR/v0.10.40/bin/node"
+    export NPM="$NVM_DIR/v0.10.40/bin/npm"
+fi
 
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/sbin"
+# set default charset
 export LC_ALL=ru_RU.UTF-8
 export LESSCHARSET=utf-8
-
-export EMAIL="Seyar Chapuh <seyar@yandex-team.ru>"

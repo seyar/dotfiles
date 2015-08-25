@@ -1,5 +1,5 @@
 # Load all variables
-. ~/.configs/.zsh/templates/vars
+. ~/.configs/zsh/templates/vars
 
 # Colors Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-solarized.light.sh"
@@ -50,7 +50,7 @@ DEFAULT_USER="seyar"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=$HOME/.configs/.zsh
+ZSH_CUSTOM=$HOME/.configs/zsh
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -88,8 +88,12 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-. ~/.configs/.zsh/aliases.common.bash
-. ~/.configs/.zsh/aliases.git.bash
-. ~/.configs/.zsh/autotmux.bash
+. ~/.configs/zsh/aliases.common.bash
+. ~/.configs/zsh/aliases.git.bash
+. ~/.configs/zsh/autotmux.bash
 
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+if [ -d ~/.profile ]; then
+    . ~/.profile
+fi;
