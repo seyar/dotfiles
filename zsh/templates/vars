@@ -9,14 +9,15 @@ fi
 
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/sbin"
 # если есть папка с нодой в /opt кинем в PATH
-DEV_NODE_BIN = /opt/nodejs/0.10/bin
+DEV_NODE_BIN="/opt/nodejs/0.10/bin"
 if [ -d $DEV_NODE_BIN ]; then
-    export PATH := $(DEV_NODE_BIN):$(PATH)
+    PATH="$DEV_NODE_BIN:$PATH"
 fi
 # если есть bin в домашней директории кинем в PATH
 if [ -d "$HOME/bin" ]; then
-    export PATH := $HOME/bin:$(PATH)
+    PATH="$HOME/bin:$PATH"
 fi
+# export PATH=path
 # set default charset
 export LC_ALL=ru_RU.UTF-8
 export LESSCHARSET=utf-8
