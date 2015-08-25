@@ -57,7 +57,7 @@ clean
 
 # create symblinks
 ln -sf ~/.configs/tmux/.tmux.conf ~/.tmux.conf
-ln -sf ~/.configs/.vimrc ~/.vimrc
+ln -sf ~/.configs/vim/.vimrc ~/.vimrc
 ln -sf ~/.configs/zsh/templates/.zshrc ~/.zshrc
 
 cd ~/.configs
