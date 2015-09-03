@@ -66,8 +66,9 @@ git submodule update
 
 echo "Install vim plugins..."
 sleep 1
-# vim -c ":BundleInstall" -c ":qa"
-# cd - >> /dev/null
+
+vim -c ":BundleInstall" -c ":qa"
+cd - >> /dev/null
 
 echo "Generate .profile and .gitconfig"
 
