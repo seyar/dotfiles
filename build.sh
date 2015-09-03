@@ -59,6 +59,7 @@ clean
 ln -sf ~/.configs/tmux/.tmux.conf ~/.tmux.conf
 ln -sf ~/.configs/vim/.vimrc ~/.vimrc
 ln -sf ~/.configs/zsh/templates/.zshrc ~/.zshrc
+ln -sf ~/.configs/.nvmrc ~/.nvmrc
 
 cd ~/.configs
 git submodule init
