@@ -17,7 +17,7 @@ set nocompatible
 " :BundleClean(!)      - confirm(or auto-ap prove) removal of unused bundles
 " for more details see :h vundle  or https://github.com/gmarik/vundle
     filetype off     " required!
-    set rtp+=~/.vimi/.vim/bundle/vundle/
+    set rtp+=~/.configs/.vim/bundle/vundle/
     call vundle#rc()
     Bundle 'git://github.com/gmarik/vundle.git'
 
