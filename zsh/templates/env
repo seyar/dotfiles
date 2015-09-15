@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.configs/oh-my-zsh
+export ZSH=$HOME/$DOTFILES_FOLDER/oh-my-zsh
 
 export NVM_DIR="/Users/seyar/.nvm"
 if [ -d "$NVM_DIR" ]; then

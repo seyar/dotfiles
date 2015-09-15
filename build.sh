@@ -54,14 +54,14 @@ read -p "Config builder wants to delete .zshrc, .tmux.conf, .gitconfig, .vimrc a
 
 echo "Clean old config files..."
 clean
-
+DOTFILES_FOLDER=${PWD##*/}
 # create symblinks
-ln -sf ~/.configs/tmux/.tmux.conf ~/.tmux.conf
-ln -sf ~/.configs/vim/.vimrc ~/.vimrc
-ln -sf ~/.configs/zsh/templates/.zshrc ~/.zshrc
-ln -sf ~/.configs/.nvmrc ~/.nvmrc
+ln -sf ~/$DOTFILES_FOLDER/tmux/.tmux.conf ~/.tmux.conf
+ln -sf ~/$DOTFILES_FOLDER/vim/.vimrc ~/.vimrc
+ln -sf ~/$DOTFILES_FOLDER/zsh/templates/.zshrc ~/.zshrc
+ln -sf ~/$DOTFILES_FOLDER/.nvmrc ~/.nvmrc
 
-cd ~/.configs
+cd ~/$DOTFILES_FOLDER
 git submodule init
 git submodule update
 
@@ -86,13 +86,13 @@ fi
 
 # echo ". ~/.configs/.profile" >> ~/.profile
 echo "[include]" >> ~/.gitconfig
-echo "  path = .configs/.gitconfig" >> ~/.gitconfig
+echo "  path = $DOTFILES_FOLDER/.gitconfig" >> ~/.gitconfig
 
 echo "Add useful commands"
 mkdir -p ~/bin
-ln -sf ~/.configs/.bin/diffconflicts ~/bin
+ln -sf ~/$DOTFILES_FOLDER/.bin/diffconflicts ~/bin
 # add tmux start config
-ln -sf ~/.configs/.bin/tm ~/bin
+ln -sf ~/$DOTFILES_FOLDER/.bin/tm ~/bin
 
 echo
 echo "Config setup is finished..."
