@@ -22,6 +22,8 @@ alias ggom='git pull origin master'
 alias gsom='git push origin master'
 alias ggod='git pull origin dev'
 alias gsod='git push origin dev'
+alias ggo='git pull origin'
+alias gso='git push origin'
 
 alias gom='git checkout master'
 alias grh='git reset --hard'
