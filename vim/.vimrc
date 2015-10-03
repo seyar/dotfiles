@@ -17,11 +17,11 @@ set nocompatible
 " :BundleClean(!)      - confirm(or auto-ap prove) removal of unused bundles
 " for more details see :h vundle  or https://github.com/gmarik/vundle
     filetype off     " required!
-    set rtp+=~/$DOTFILES_FOLDER/.vim/bundle/vundle/
+    set rtp+=~/.dotfiles/.vim/bundle/vundle/
     call vundle#rc()
     Bundle 'git://github.com/gmarik/vundle.git'
 
-    source ~/$DOTFILES_FOLDER/vim/plugins.vim
+    source ~/.dotfiles/vim/plugins.vim
     
     filetype plugin indent on     " required!
 
@@ -585,16 +585,16 @@ set nocompatible
     autocmd FileType jade setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 " Plugins
-    source ~/$DOTFILES_FOLDER/vim/solarized.vim
+    source ~/.dotfiles/vim/solarized.vim
 
 " NERDTree
-    source ~/$DOTFILES_FOLDER/vim/nerdtree.vim
+    source ~/.dotfiles/vim/nerdtree.vim
 
 " Zen Coding
-    source ~/$DOTFILES_FOLDER/vim/zen-coding.vim
+    source ~/.dotfiles/vim/zen-coding.vim
 
 " UltiSnips
-    source ~/$DOTFILES_FOLDER/vim/ulti-snips.vim
+    source ~/.dotfiles/vim/ulti-snips.vim
 
 " VimWiki
     "    let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]
