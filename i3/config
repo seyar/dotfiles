@@ -189,6 +189,14 @@ exec --no-startup-id gnome-screenscaver
 exec --no-startup-id gnome-keyring-daemon --start
 exec --no-startup-id conky_start
 
+# https://bbs.archlinux.org/viewtopic.php?id=159418
+# http://www.linux.org.ru/forum/general/6603527
+# exec_always setxkbmap -layout us,ru -option grp:ctrl_shift_toggle -variant winkeys
+
+### Setup displays and wallpaper ###
+exec_always (xrandr | grep -E 'connected .*? 510mm x 287mm' &> /dev/null) && xrandr --output LVDS-0 --off
+exec_always (xrandr | grep -E 'connected .*? 510mm x 287mm' &> /dev/null) && xrandr --output VGA-0 --mode 1920x1080
+
 # BAR
 # ===
 bindsym $mod+m bar mode invisible
