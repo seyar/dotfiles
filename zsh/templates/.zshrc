@@ -95,6 +95,9 @@ fi
 
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+NODE=$(which node)
+NPM=$(which npm)
+
 if [ -f ~/.profile ]; then
     . ~/.profile
 fi;

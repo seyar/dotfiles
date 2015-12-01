@@ -9,6 +9,7 @@ alias ta='$HOME/$DOTFILES_FOLDER/.bin/tm'
 # alias tn='tmux new'
 # alias ta='tmux attach'
 alias tls='tmux ls'
+alias build='make release && debuild -b && debrelease'
 
 # Set appropriate ls alias
 case $(uname -s) in
