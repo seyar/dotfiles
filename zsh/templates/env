@@ -16,3 +16,6 @@ fi
 # set default charset
 export LC_ALL=ru_RU.UTF-8
 export LESSCHARSET=utf-8
+
+# If you installed the SDK via Homebrew, otherwise ~/Library/Android/sdk
+export ANDROID_HOME=/usr/local/opt/android-sdk
