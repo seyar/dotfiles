@@ -91,8 +91,9 @@ echo "  path = $DOTFILES_FOLDER/.gitconfig" >> ~/.gitconfig
 echo "Add useful commands"
 mkdir -p ~/bin
 ln -sf ~/$DOTFILES_FOLDER/.bin/diffconflicts ~/bin
+
 # add tmux start config
-ln -sf ~/$DOTFILES_FOLDER/.bin/tm ~/bin
+#ln -sf ~/$DOTFILES_FOLDER/.bin/tm ~/bin
 
 echo
 echo "Config setup is finished..."
