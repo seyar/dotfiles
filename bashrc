@@ -59,60 +59,6 @@ xterm*|rxvt*)
     ;;
 esac
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-#if [ -f ~/.bash_aliases ]; then
-#    . ~/.bash_aliases
-#fi
-
-# enable color support of ls and also add handy aliases
-if [ "$TERM" != "dumb" ] && [ -x /usr/bin/dircolors ]; then
-    eval "`dircolors -b`"
-    alias ls='ls --color=auto'
-    #alias dir='ls --color=auto --format=vertical'
-    #alias vdir='ls --color=auto --format=long'
-
-    #alias grep='grep --color=auto'
-    #alias fgrep='fgrep --color=auto'
-    #alias egrep='egrep --color=auto'
-fi
-
-# some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
-
-alias l='ls -la'
-alias hgr='history | grep '
-
-alias mb='make -B'
-alias mcl='make clean'
-alias mli='make lego.import'
-alias mdg='make debug'
-alias mdv='make dev'
-alias mr='make rebuild'
-
-alias cdh='cd html'
-alias cdw='cd www && l'
-alias v='cd ..'
-alias vv='cd ../..'
-alias vvv='cd ../../..'
-alias vvvv='cd ../../../..'
-alias ve='vi .'
-
-alias tmu='tmux attach || tmux new '
-alias tmuxkill='tmux kill-server '
-
-alias bcb='bem create block'
-alias em='./node_modules/.bin/enb make'
-alias ei18n='./node_modules/.bin/enb make i18n.get'
-alias js='git_cached_files=$(git diff --cached --name-only --diff-filter=ACMR | xargs echo); ./node_modules/.bin/jscs $git_cached_files'
-alias lint='git_cached_files=$(git diff --cached --name-only --diff-filter=ACMR | xargs echo); ./node_modules/.bin/jshint-groups $git_cached_files'
-alias св='cd'
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -120,44 +66,12 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-export LC_ALL=ru_RU.UTF-8
+. ~/$DOTFILES_FOLDER/zsh/aliases.common.bash
+. ~/$DOTFILES_FOLDER/zsh/aliases.git.bash
+. ~/$DOTFILES_FOLDER/zsh/aliases.iterm.bash
+. ~/$DOTFILES_FOLDER/zsh/templates/env
 
-#alias algol='ssh algol.maps.yandex.ru'
-alias vega='ssh vega.maps.yandex.ru'
-
-alias dch='dch --distributor debian --distribution unstable'
-export EMAIL="Seyar Chapuh <seyar@yandex-team.ru>"
-
-alias gs='git status -s'
-alias ga='git add '
-alias gb='git branch '
-alias gc='git commit'
-alias go='git checkout '
-
-alias gsl='git status | less'
-alias gl='git log'
-
-alias ggom='git pull origin master'
-alias gsom='git push origin master'
-alias ggod='git pull origin dev'
-alias gsod='git push origin dev'
-
-alias gom='git checkout master'
-alias grh='git reset --hard'
-alias gcl='git clean -f -d'
-alias gcp='git cherry-pick'
-alias gfo='git fetch origin'
-alias grm='git rm -r'
-alias gms='git merge --squash'
-alias gabp='git add blocks/ pages/'
-alias grsh='git reset --soft HEAD^'
-alias gh='git hist'
-alias gd='git diff'
-alias пы='git status -s'
-alias пв='git diff'
-alias пр='git hist'
-
-source ~/.bash/.git-completion.sh
+. ~/$DOTFILES_FOLDER/zsh/git-completion.bash
 complete -o default -o nospace -F _git_checkout go
 complete -o default -o nospace -F _git_branch gb
 
@@ -186,15 +100,3 @@ complete -o default -o nospace -F _git_branch gb
  }
 
  __set_prompt
-
-export NODE_PATH="/usr/local/homebrew/share/npm/bin"
-export NODE_PATH="/usr/local/lib/node_modules"
-
-alias mysql=/usr/local/mysql/bin/mysql
-alias mysqladmin=/usr/local/mysql/bin/mysqladmin
-
-alias port="sudo port"
-alias portup="port -v selfupdate && port upgrade outdated"
-
-export PATH=/Users/seyar/.gem/ruby/1.8/bin:$PATH
-export PATH=/Developer/usr/bin:/opt/local/bin:$PATH

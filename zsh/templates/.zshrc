@@ -3,7 +3,7 @@ export DOTFILES_FOLDER=".dotfiles"
 . ~/$DOTFILES_FOLDER/zsh/templates/env
 
 # Colors Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/base16-solarized.light.sh"
+BASE16_SHELL="$HOME/.dotfiles/base16-shell/base16-solarized.light.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # Set name of the theme to load.
@@ -91,7 +91,16 @@ fi
 
 . ~/$DOTFILES_FOLDER/zsh/aliases.common.bash
 . ~/$DOTFILES_FOLDER/zsh/aliases.git.bash
-. ~/$DOTFILES_FOLDER/zsh/autotmux.bash
+. ~/$DOTFILES_FOLDER/zsh/aliases.iterm.bash
+#. ~/$DOTFILES_FOLDER/zsh/autotmux.bash
+#. ~/$DOTFILES_FOLDER/zsh/git-completion.bash
+#. ~/$DOTFILES_FOLDER/zsh/git-flow-completion.bash
+#. ~/$DOTFILES_FOLDER/zsh/autoscreen.bash
+. ~/$DOTFILES_FOLDER/zsh/z.sh
+
+if git --version 2>&1 >/dev/null; then
+    . ~/$DOTFILES_FOLDER/zsh/autoupdate.bash
+fi
 
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 

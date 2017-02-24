@@ -5,7 +5,6 @@ alias gm="git merge --no-ff"
 alias gpt="git push --tags"
 alias gp="git push"
 alias gcob="git checkout -b"
-alias gco="git checkout"
 alias gr='cd "`git rev-parse --show-toplevel`"'
 
 alias gs='git status -s'

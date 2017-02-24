@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/$DOTFILES_FOLDER/oh-my-zsh
 
-export NVM_DIR="/Users/seyar/.nvm"
+export NVM_DIR="$HOME/.nvm"
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/sbin"
 # если есть папка с нодой в /opt кинем в PATH
 DEV_NODE_BIN="/opt/nodejs/0.10/bin"
@@ -16,6 +16,13 @@ fi
 # set default charset
 export LC_ALL=ru_RU.UTF-8
 export LESSCHARSET=utf-8
+
+#export NODE_PATH="/usr/local/homebrew/share/npm/bin"
+#export NODE_PATH="/usr/local/lib/node_modules"
+
+#export PATH=/Users/seyar/.gem/ruby/1.8/bin:$PATH
+#export PATH=/Developer/usr/bin:/opt/local/bin:$PATH
+export EMAIL="Seyar Chapuh <seyar@yandex-team.ru>"
 
 # If you installed the SDK via Homebrew, otherwise ~/Library/Android/sdk
 export ANDROID_HOME=/usr/local/opt/android-sdk
