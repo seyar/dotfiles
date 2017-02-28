@@ -31,13 +31,18 @@ alias lint='git_cached_files=$(git diff --cached --name-only --diff-filter=ACMR 
 
 alias build='make release && debuild -b && debrelease'
 
-alias convert='HandBrakeCli --audio-copy-mask=ac3,dts,dtshd --audio-fallback=ffac3 -e=x264 --quality=23 --ab=160'
-
 alias mysql=/usr/local/mysql/bin/mysql
 alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 
 alias port="sudo port"
 alias portup="port -v selfupdate && port upgrade outdated"
+
+function convert() {
+    HandBrakeCLI -e x264 -q 22 -r 25 -B 64 -X 480 -O -i $1 -o ${1%.*}_converted.mp4
+}
+function convert-fast() {
+    HandBrakeCLI --preset="Very Fast 720p30" -i $1 -o ${1%.*}_converted.mp4
+}
 
 # Set appropriate ls alias
 case $(uname -s) in
