@@ -1,0 +1,40 @@
+"*":
+  core:
+    automaticallyUpdate: false
+    disabledPackages: [
+      "bookmarks"
+      "language-clojure"
+      "language-coffee-script"
+      "language-c"
+      "language-csharp"
+      "language-go"
+      "language-java"
+      "language-objective-c"
+      "language-perl"
+      "language-php"
+      "language-python"
+      "language-ruby"
+      "language-ruby-on-rails"
+      "language-sql"
+      "atom-keyboard-macros"
+    ]
+    projectHome: "/Users/seyar/work"
+    telemetryConsent: "limited"
+    themes: [
+      "one-light-ui"
+      "one-light-syntax"
+    ]
+  editor:
+    fontFamily: "Input"
+    invisibles: {}
+    preferredLineLength: 120
+    scrollPastEnd: true
+    showIndentGuide: true
+    softWrapAtPreferredLineLength: true
+    tabLength: 4
+    tabType: "soft"
+  "exception-reporting":
+    userId: "a6b129f3-a646-a19e-d3a2-6812ddf579e7"
+  motepair: {}
+  welcome:
+    showOnStartup: false
