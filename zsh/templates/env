@@ -25,4 +25,9 @@ export LESSCHARSET=utf-8
 export EMAIL="Seyar Chapuh <seyar@yandex-team.ru>"
 
 # If you installed the SDK via Homebrew, otherwise ~/Library/Android/sdk
-export ANDROID_HOME=/usr/local/opt/android-sdk
+export ANDROID_HOME=/Users/seyar/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+
+export SELENIUM_GRID_LOGIN='geo'
+export SELENIUM_GRID_PASSWORD='9a847400b43b75f6852363207b09aa0d'

@@ -110,3 +110,9 @@ NPM=$(which npm)
 if [ -f ~/.profile ]; then
     . ~/.profile
 fi;
+
+# add to your .bashrc or .zshrc
+source /Users/seyar/work/ssh-find-agent/ssh-find-agent.sh
+if ! test $SSH_AUTH_SOCK; then
+    set_ssh_agent_socket
+fi

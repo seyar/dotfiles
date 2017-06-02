@@ -153,6 +153,8 @@ set nocompatible
     set numberwidth=3
     :highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
     
+    let g:ackprg = 'ag --nogroup --nocolor --column'
+
 " Status line
     function! FileSize()
         let bytes = getfsize(expand("%:p"))
