@@ -1,4 +1,7 @@
-export DOTFILES_FOLDER=".dotfiles"
+if [ -f ~/.profile ]; then
+    . ~/.profile
+fi;
+
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # for examples

@@ -8,21 +8,16 @@ DEV_NODE_BIN="/opt/nodejs/0.10/bin"
 if [ -d $DEV_NODE_BIN ]; then
     PATH="$DEV_NODE_BIN:$PATH"
 fi
-# если есть bin в домашней директории кинем в PATH
-if [ -d "$HOME/bin" ]; then
-    PATH="$HOME/bin:$PATH"
-fi
+
 # export PATH=path
 # set default charset
-export LC_ALL=ru_RU.UTF-8
-export LESSCHARSET=utf-8
 
 #export NODE_PATH="/usr/local/homebrew/share/npm/bin"
 #export NODE_PATH="/usr/local/lib/node_modules"
 
 #export PATH=/Users/seyar/.gem/ruby/1.8/bin:$PATH
 #export PATH=/Developer/usr/bin:/opt/local/bin:$PATH
-export EMAIL="Seyar Chapuh <seyar@yandex-team.ru>"
+#export EMAIL="Seyar Chapuh <seyar@yandex-team.ru>"
 
 # If you installed the SDK via Homebrew, otherwise ~/Library/Android/sdk
 export ANDROID_HOME=/Users/seyar/Library/Android/sdk

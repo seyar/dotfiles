@@ -49,13 +49,21 @@ done
 echo "Config setup is started..."
 echo
 
-read -p "Config builder wants to delete .zshrc, .tmux.conf, .gitconfig, .vimrc and .vim. Do you want to continue? (y/n)? " REPLY
+read -p "Config builder wants to delete .bashrc .zshrc, .tmux.conf, .gitconfig, .vimrc and .vim. Do you want to continue? (y/n)? " REPLY
 [ "$REPLY" != "y" ] && exit
 
 echo "Clean old config files..."
 clean
-DOTFILES_FOLDER=${PWD##*/}
+if [ -d "$HOME/.dotfiles" ]; then
+    DOTFILES_FOLDER=".dotfiles"
+elif [ -d "$HOME/dotfiles" ]; then
+    DOTFILES_FOLDER="dotfiles"
+else
+    DOTFILES_FOLDER=${PWD##*/}
+fi
+
 # create symblinks
+ln -sf ~/$DOTFILES_FOLDER/bashrc ~/.bashrc
 ln -sf ~/$DOTFILES_FOLDER/tmux/.tmux.conf ~/.tmux.conf
 ln -sf ~/$DOTFILES_FOLDER/vim/.vimrc ~/.vimrc
 ln -sf ~/$DOTFILES_FOLDER/zsh/templates/.zshrc ~/.zshrc
@@ -84,7 +92,9 @@ if [ -n "$NAME" ] &&  [ -n "$EMAIL" ]; then
     echo "  email = $EMAIL" >> ~/.gitconfig
 fi
 
-# echo ". ~/.configs/.profile" >> ~/.profile
+echo "export DOTFILES_FOLDER=\"$DOTFILES_FOLDER\"" >> ~/.profile
+
+echo ". ~/$DOTFILES_FOLDER/.profile" >> ~/.profile
 echo "[include]" >> ~/.gitconfig
 echo "  path = $DOTFILES_FOLDER/.gitconfig" >> ~/.gitconfig
 

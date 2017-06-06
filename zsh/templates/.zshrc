@@ -1,4 +1,7 @@
-export DOTFILES_FOLDER=".dotfiles"
+if [ -f ~/.profile ]; then
+    . ~/.profile
+fi;
+
 # Load all variables
 . ~/$DOTFILES_FOLDER/zsh/templates/env
 
@@ -68,11 +71,11 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='vim'
-fi
+#if [[ -n $SSH_CONNECTION ]]; then
+#  export EDITOR='vim'
+#else
+#  export EDITOR='vim'
+#fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -106,10 +109,6 @@ fi
 
 NODE=$(which node)
 NPM=$(which npm)
-
-if [ -f ~/.profile ]; then
-    . ~/.profile
-fi;
 
 # add to your .bashrc or .zshrc
 source /Users/seyar/work/ssh-find-agent/ssh-find-agent.sh
