@@ -1,5 +1,6 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
+export DOTFILES_FOLDER=".dotfiles"
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# ~/.bashrc: executed by bash(1) for non-login shells.
 # for examples
 
 # If not running interactively, don't do anything
