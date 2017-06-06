@@ -17,6 +17,11 @@
       "language-ruby-on-rails"
       "language-sql"
       "atom-keyboard-macros"
+      "motepair"
+      "script"
+      "archive-view"
+      "language-toml"
+      "open-on-github"
     ]
     projectHome: "/Users/seyar/work"
     telemetryConsent: "limited"
