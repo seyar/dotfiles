@@ -7,6 +7,8 @@ Prerequisites
   * git (>=1.7.10)
   * vim (>=7.3)
   * screen
+  * tmux
+  * oh-my-zsh
 
 Features
 =========================
@@ -25,9 +27,12 @@ Install
 =========================
 Clone my repository with configs and execute build.sh:
 
-    git clone git://github.com/seyar/configs.git ~/.configs
-    ~/.configs/./build.sh --name='YOUR NAME' --email=EMAIL
-
+```
+    git clone git://github.com/seyar/dotfiles.git ~/.dotfiles
+    cd ~/.dotfiles/
+    git submodule update --init --recursive
+    ./build.sh --name='YOUR NAME' --email=EMAIL
+```
 Enjoy! :)
 
 Credits
