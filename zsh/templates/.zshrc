@@ -9,6 +9,7 @@ fi;
 BASE16_SHELL="$HOME/.dotfiles/base16-shell/base16-solarized.light.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
+setopt PROMPT_SUBST ; PS1='[%n@%m %c$(__git_ps1 " (%s)")]\$ '
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -95,6 +96,7 @@ source $ZSH/oh-my-zsh.sh
 . ~/$DOTFILES_FOLDER/zsh/aliases.common.bash
 . ~/$DOTFILES_FOLDER/zsh/aliases.git.bash
 . ~/$DOTFILES_FOLDER/zsh/aliases.iterm.bash
+. ~/$DOTFILES_FOLDER/zsh/git-prompt.bash
 #. ~/$DOTFILES_FOLDER/zsh/autotmux.bash
 #. ~/$DOTFILES_FOLDER/zsh/git-completion.bash
 #. ~/$DOTFILES_FOLDER/zsh/git-flow-completion.bash
