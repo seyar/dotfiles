@@ -113,7 +113,7 @@ NODE=$(which node)
 NPM=$(which npm)
 
 # add to your .bashrc or .zshrc
-source /Users/seyar/work/ssh-find-agent/ssh-find-agent.sh
-if ! test $SSH_AUTH_SOCK; then
-    set_ssh_agent_socket
-fi
+#source /$DOTFILES_FOLDER/ssh-find-agent.sh
+#if ! test $SSH_AUTH_SOCK; then
+#    set_ssh_agent_socket
+#fi
