@@ -1,9 +1,7 @@
+# This includes ~/.dotfiles/.profile also
 if [ -f ~/.profile ]; then
     . ~/.profile
 fi;
-
-# Load all variables
-. ~/$DOTFILES_FOLDER/zsh/templates/env
 
 # Colors Base16 Shell
 BASE16_SHELL="$HOME/.dotfiles/base16-shell/base16-solarized.light.sh"
@@ -111,9 +109,3 @@ fi
 
 NODE=$(which node)
 NPM=$(which npm)
-
-# add to your .bashrc or .zshrc
-#source /$DOTFILES_FOLDER/ssh-find-agent.sh
-#if ! test $SSH_AUTH_SOCK; then
-#    set_ssh_agent_socket
-#fi

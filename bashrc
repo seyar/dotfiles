@@ -73,7 +73,6 @@ fi
 . ~/$DOTFILES_FOLDER/zsh/aliases.common.bash
 . ~/$DOTFILES_FOLDER/zsh/aliases.git.bash
 . ~/$DOTFILES_FOLDER/zsh/aliases.iterm.bash
-. ~/$DOTFILES_FOLDER/zsh/templates/env
 
 . ~/$DOTFILES_FOLDER/zsh/git-completion.bash
 complete -o default -o nospace -F _git_checkout go

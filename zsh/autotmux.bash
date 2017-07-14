@@ -1,3 +1,4 @@
+#!/bin/sh
 if [ -z "$TMUX" ]; then
     # we're not in a tmux session
 
@@ -23,7 +24,8 @@ if [ -z "$TMUX" ]; then
         # Add all default keys to ssh auth
         ssh-add 2>/dev/null
 
-        # start tmux
         tmux attach || tmux new
+    else
+        tmux -CC attach || tmux -CC new
     fi
 fi
