@@ -103,3 +103,6 @@ complete -o default -o nospace -F _git_branch gb
  }
 
  __set_prompt
+
+export NODE=node
+export NPM=npm

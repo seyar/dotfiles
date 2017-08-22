@@ -12,8 +12,8 @@ setopt PROMPT_SUBST ; PS1='[%n@%m %c$(__git_ps1 " (%s)")]\$ '
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="cobalt2"
-ZSH_THEME="sunrise"
+ZSH_THEME="cobalt2"
+#ZSH_THEME="sunrise"
 #ZSH_THEME="jaischeema"
 #ZSH_THEME="robbyrussell"
 DEFAULT_USER="seyar"
