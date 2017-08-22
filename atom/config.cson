@@ -29,7 +29,7 @@
       "one-light-syntax"
     ]
   editor:
-    fontFamily: "Input"
+    fontFamily: "Input Sans"
     invisibles: {}
     preferredLineLength: 120
     scrollPastEnd: true
