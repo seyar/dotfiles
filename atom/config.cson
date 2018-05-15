@@ -1,6 +1,18 @@
 "*":
   core:
     automaticallyUpdate: false
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".hgrc"
+        ".flowconfig"
+      ]
+      "source.json": [
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
     disabledPackages: [
       "bookmarks"
       "language-clojure"
@@ -21,6 +33,7 @@
       "archive-view"
       "language-toml"
       "open-on-github"
+      "tree-view"
     ]
     projectHome: "/Users/seyar/work"
     telemetryConsent: "limited"
@@ -40,5 +53,16 @@
   "exception-reporting":
     userId: "a6b129f3-a646-a19e-d3a2-6812ddf579e7"
   motepair: {}
+  nuclide:
+    "nuclide-working-sets":
+      workingSets: [
+        {
+          name: "gryadka"
+          active: true
+          uris: [
+            "/Users/seyar/work/gryadka"
+          ]
+        }
+      ]
   welcome:
     showOnStartup: false
