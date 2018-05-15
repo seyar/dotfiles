@@ -108,5 +108,5 @@ fi
 
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-NODE=$(which node)
-NPM=$(which npm)
+#NODE=$(which node)
+#NPM=$(which npm)
