@@ -28,9 +28,6 @@ export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH=${PATH}:/Library/Frameworks/Mono.framework/Versions/Current/bin/
 
-export SELENIUM_GRID_LOGIN='geo'
-export SELENIUM_GRID_PASSWORD='9a847400b43b75f6852363207b09aa0d'
-
 # Use local bin before
 if [ -d ${HOME}/bin ] ; then
     PATH=${HOME}/bin:${PATH}
