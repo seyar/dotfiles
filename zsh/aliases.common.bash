@@ -23,6 +23,8 @@ alias lint='git_cached_files=$(git diff --cached --name-only --diff-filter=ACMR 
 alias port="sudo port"
 alias portup="port -v selfupdate && port upgrade outdated"
 
+alias q="./node_modules/.bin/qtools "
+
 function convert() {
     HandBrakeCLI -e x264 -q 22 -r 25 -B 64 -X 480 -O -i $1 -o ${1%.*}_converted.mp4
 }

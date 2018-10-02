@@ -26,7 +26,6 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X
 export PATH=${PATH}:$N_PREFIX/bin
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
-export PATH=${PATH}:/Library/Frameworks/Mono.framework/Versions/Current/bin/
 
 # Use local bin before
 if [ -d ${HOME}/bin ] ; then

@@ -106,7 +106,4 @@ if git --version 2>&1 >/dev/null; then
     . ~/$DOTFILES_FOLDER/zsh/autoupdate.bash
 fi
 
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-#NODE=$(which node)
-#NPM=$(which npm)
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
