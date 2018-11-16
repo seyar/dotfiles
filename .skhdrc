@@ -92,7 +92,9 @@ test < down : chunkc tiling::window --focus north
 test < right : chunkc tiling::window --focus east
 
 cmd - j : chunkc tiling::window --focus prev
+alt - tab : chunkc tiling::window --focus prev
 test < cmd - tab : chunkc tiling::window --focus next
+#alt - tab : chunkc tiling::window --focus next
 
 ## equalize size of windows
 #shift + alt - 0 : chunkc tiling::desktop --equalize
@@ -120,25 +122,25 @@ test < cmd - right : chunkc tiling::window --swap east; skhd -k "alt - d"
 
 ## fast focus desktop
 #cmd + alt - x : chunkc tiling::desktop --focus $(chunkc get _last_active_desktop)
-#cmd + alt - z : chunkc tiling::desktop --focus prev
+test < cmd + alt - z : chunkc tiling::desktop --focus prev
 #cmd + alt - c : chunkc tiling::desktop --focus next
-#cmd + alt - 1 : chunkc tiling::desktop --focus 1
-#cmd + alt - 2 : chunkc tiling::desktop --focus 2
-#cmd + alt - 3 : chunkc tiling::desktop --focus 3
-#cmd + alt - 4 : chunkc tiling::desktop --focus 4
-#cmd + alt - 5 : chunkc tiling::desktop --focus 5
+alt - q : chunkc tiling::desktop --focus 1
+alt - w : chunkc tiling::desktop --focus 2
+alt - a : chunkc tiling::desktop --focus 3
+alt - s : chunkc tiling::desktop --focus 4
+alt - e : chunkc tiling::desktop --focus 5
 #cmd + alt - 6 : chunkc tiling::desktop --focus 6
 #cmd + alt - 7 : chunkc tiling::desktop --focus 7
 
 ## send window to desktop
 #shift + alt - x : chunkc tiling::window --send-to-desktop $(chunkc get _last_active_desktop)
 #shift + alt - z : chunkc tiling::window --send-to-desktop prev
-#shift + alt - c : chunkc tiling::window --send-to-desktop next
-#shift + alt - 1 : chunkc tiling::window --send-to-desktop 1
-#shift + alt - 2 : chunkc tiling::window --send-to-desktop 2
-#shift + alt - 3 : chunkc tiling::window --send-to-desktop 3
-#shift + alt - 4 : chunkc tiling::window --send-to-desktop 4
-#shift + alt - 5 : chunkc tiling::window --send-to-desktop 5
+test < shift + alt - c : chunkc tiling::window --send-to-desktop next
+test < shift + alt - 1 : chunkc tiling::window --send-to-desktop 1; skhd -k "alt - d"
+test < shift + alt - 2 : chunkc tiling::window --send-to-desktop 2; skhd -k "alt - d"
+test < shift + alt - 3 : chunkc tiling::window --send-to-desktop 3; skhd -k "alt - d"
+test < shift + alt - 4 : chunkc tiling::window --send-to-desktop 4; skhd -k "alt - d"
+test < shift + alt - 5 : chunkc tiling::window --send-to-desktop 5; skhd -k "alt - d"
 #shift + alt - 6 : chunkc tiling::window --send-to-desktop 6
 #shift + alt - 7 : chunkc tiling::window --send-to-desktop 7
 
@@ -146,11 +148,11 @@ test < cmd - right : chunkc tiling::window --swap east; skhd -k "alt - d"
 #shift + cmd - x : chunkc tiling::window --send-to-desktop $(chunkc get _last_active_desktop); chunkc tiling::desktop --focus $(chunkc get _last_active_desktop)
 #shift + cmd - z : chunkc tiling::window --send-to-desktop prev; chunkc tiling::desktop --focus prev
 #shift + cmd - c : chunkc tiling::window --send-to-desktop next; chunkc tiling::desktop --focus next
-#shift + cmd - 1 : chunkc tiling::window --send-to-desktop 1; chunkc tiling::desktop --focus 1
-#shift + cmd - 2 : chunkc tiling::window --send-to-desktop 2; chunkc tiling::desktop --focus 2
-#shift + cmd - 3 : chunkc tiling::window --send-to-desktop 3; chunkc tiling::desktop --focus 3
-#shift + cmd - 4 : chunkc tiling::window --send-to-desktop 4; chunkc tiling::desktop --focus 4
-#shift + cmd - 5 : chunkc tiling::window --send-to-desktop 5; chunkc tiling::desktop --focus 5
+test < shift + cmd - 1 : chunkc tiling::window --send-to-desktop 1; chunkc tiling::desktop --focus 1; skhd -k "alt - d"
+test < shift + cmd - 2 : chunkc tiling::window --send-to-desktop 2; chunkc tiling::desktop --focus 2; skhd -k "alt - d"
+test < shift + cmd - 3 : chunkc tiling::window --send-to-desktop 3; chunkc tiling::desktop --focus 3; skhd -k "alt - d"
+test < shift + cmd - 4 : chunkc tiling::window --send-to-desktop 4; chunkc tiling::desktop --focus 4; skhd -k "alt - d"
+test < shift + cmd - 5 : chunkc tiling::window --send-to-desktop 5; chunkc tiling::desktop --focus 5; skhd -k "alt - d"
 #shift + cmd - 6 : chunkc tiling::window --send-to-desktop 6; chunkc tiling::desktop --focus 6
 #shift + cmd - 7 : chunkc tiling::window --send-to-desktop 7; chunkc tiling::desktop --focus 7
 

@@ -32,6 +32,11 @@ function convert-fast() {
     HandBrakeCLI --preset="Very Fast 720p30" -i $1 -o ${1%.*}_converted.mp4
 }
 
+#function rsi-diff() {
+#    echo "Profit: "; cat $argv | grep '\"diff\":' | jq '.diff' | awk '{x+=$0}END{print x}';
+#    echo "Order numbers: "; cat $argv | grep -c '\"diff\":';
+#}
+
 # Set appropriate ls alias
 case $(uname -s) in
     Darwin|FreeBSD)

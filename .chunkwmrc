@@ -22,7 +22,7 @@ chunkc core::log_file stdout
 #       - none, debug, profile, warn, error
 #
 
-chunkc core::log_level warn
+chunkc core::log_level error
 
 #
 # NOTE: specify the absolutepath to the directory to use when loading a plugin.
@@ -135,4 +135,13 @@ chunkc tiling::rule --owner \"App Store\" --state float &
 chunkc tiling::rule --name Jabber --state float &
 chunkc tiling::rule --owner Emacs --except "^$" --state tile &
 chunkc tiling::rule --owner \"System Preferences\" --subrole AXStandardWindow --state float &
+
+#Webstorm rules
+chunkc tiling::rule --owner WebStorm --name \"Go to Line\/Column\" --state float &
+chunkc tiling::rule --owner WebStorm --name \"Preferences\" --state float &
+chunkc tiling::rule --owner WebStorm --name \"Choose Content to Paste\" --state float &
+chunkc tiling::rule --owner WebStorm --name \"New File\" --state float &
+#chunkc tiling::rule --owner WebStorm --name \"Delete\" --state float &
+chunkc tiling::rule --owner \"Activity Monitor\" --state float &
+chunkc tiling::rule --owner \"MacPass\" --state float &
 
