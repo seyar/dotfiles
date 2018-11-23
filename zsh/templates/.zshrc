@@ -60,7 +60,16 @@ ZSH_CUSTOM=$HOME/$DOTFILES_FOLDER/zsh
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+   git
+   docker
+   zsh-autosuggestions
+   zsh-syntax-highlighting
+   sudo
+   ssh-agent
+   npm
+   gitfast
+)
 
 # User configuration
 
