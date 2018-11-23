@@ -18,7 +18,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/$DOTFILES_FOLDER/oh-my-zsh
 
-export N_PREFIX="$HOME/n"
+#export N_PREFIX="$HOME/n"
 # If you installed the SDK via Homebrew, otherwise ~/Library/Android/sdk
 export ANDROID_HOME=/Users/seyar/Library/Android/sdk
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
