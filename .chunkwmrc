@@ -60,7 +60,7 @@ chunkc set global_desktop_offset_gap     1
 # NOTE: syntax for desktop-specific settings
 #
 # chunkc set 2_desktop_mode                monocle
-# chunkc set 5_desktop_mode                float
+chunkc set 5_desktop_mode                float
 # chunkc set 3_desktop_offset_top          190
 # chunkc set 3_desktop_offset_bottom       190
 # chunkc set 3_desktop_offset_left         190
@@ -144,4 +144,5 @@ chunkc tiling::rule --owner WebStorm --name \"New File\" --state float &
 #chunkc tiling::rule --owner WebStorm --name \"Delete\" --state float &
 chunkc tiling::rule --owner \"Activity Monitor\" --state float &
 chunkc tiling::rule --owner \"MacPass\" --state float &
+chunkc tiling::rule --owner \"Notion\" --state float &
 
