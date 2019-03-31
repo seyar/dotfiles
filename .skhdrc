@@ -125,19 +125,34 @@ test < cmd - right : chunkc tiling::window --swap east; skhd -k "alt - d"
 test < cmd + alt - z : chunkc tiling::desktop --focus prev
 #cmd + alt - c : chunkc tiling::desktop --focus next
 alt - q : chunkc tiling::desktop --focus 1
+alt - 1 : chunkc tiling::desktop --focus 1
 test < 1 : chunkc tiling::desktop --focus 1; skhd -k "alt - d"
+
 alt - w : chunkc tiling::desktop --focus 2
+alt - 2 : chunkc tiling::desktop --focus 2
 test < 2 : chunkc tiling::desktop --focus 2; skhd -k "alt - d"
+
 alt - a : chunkc tiling::desktop --focus 3
+alt - 3 : chunkc tiling::desktop --focus 3
 test < 3 : chunkc tiling::desktop --focus 3; skhd -k "alt - d"
+
 alt - s : chunkc tiling::desktop --focus 4
+alt - 4 : chunkc tiling::desktop --focus 4
 test < 4 : chunkc tiling::desktop --focus 4; skhd -k "alt - d"
+
 alt - e : chunkc tiling::desktop --focus 5
 test < 5 : chunkc tiling::desktop --focus 5; skhd -k "alt - d"
+alt - 5 : chunkc tiling::desktop --focus 5
+
 test < 6 : chunkc tiling::desktop --focus 6; skhd -k "alt - d"
+alt - 6 : chunkc tiling::desktop --focus 6
 test < 6 : chunkc tiling::desktop --focus 6; skhd -k "alt - d"
+
 test < 7 : chunkc tiling::desktop --focus 7; skhd -k "alt - d"
+alt - 7 : chunkc tiling::desktop --focus 7
+
 test < 8 : chunkc tiling::desktop --focus 8; skhd -k "alt - d"
+
 test < 9 : chunkc tiling::desktop --focus 9; skhd -k "alt - d"
 
 
@@ -150,7 +165,8 @@ test < shift + alt - 2 : chunkc tiling::window --send-to-desktop 2; skhd -k "alt
 test < shift + alt - 3 : chunkc tiling::window --send-to-desktop 3; skhd -k "alt - d"
 test < shift + alt - 4 : chunkc tiling::window --send-to-desktop 4; skhd -k "alt - d"
 test < shift + alt - 5 : chunkc tiling::window --send-to-desktop 5; skhd -k "alt - d"
-#shift + alt - 6 : chunkc tiling::window --send-to-desktop 6
+test < shift + alt - 6 : chunkc tiling::window --send-to-desktop 6; skhd -k "alt - d"
+#test < alt - 6 : chunkc tiling::window --send-to-desktop 6; skhd -k "alt - d"I
 #shift + alt - 7 : chunkc tiling::window --send-to-desktop 7
 
 ## send window to desktop and follow focus
@@ -162,6 +178,7 @@ test < shift + cmd - 2 : chunkc tiling::window --send-to-desktop 2; chunkc tilin
 test < shift + cmd - 3 : chunkc tiling::window --send-to-desktop 3; chunkc tiling::desktop --focus 3; skhd -k "alt - d"
 test < shift + cmd - 4 : chunkc tiling::window --send-to-desktop 4; chunkc tiling::desktop --focus 4; skhd -k "alt - d"
 test < shift + cmd - 5 : chunkc tiling::window --send-to-desktop 5; chunkc tiling::desktop --focus 5; skhd -k "alt - d"
+test < shift + cmd - 6 : chunkc tiling::window --send-to-desktop 6; chunkc tiling::desktop --focus 6; skhd -k "alt - d"
 #shift + cmd - 6 : chunkc tiling::window --send-to-desktop 6; chunkc tiling::desktop --focus 6
 #shift + cmd - 7 : chunkc tiling::window --send-to-desktop 7; chunkc tiling::desktop --focus 7
 
@@ -239,11 +256,15 @@ test < s : chunkc tiling::window --toggle sticky;\
 #shift + alt - t : chunkc set window_float_next 1
 
 # change layout of desktop
-#ctrl + alt - a : chunkc tiling::desktop --layout bsp
 f9 : chunkc tiling::desktop --layout bsp
-#ctrl + alt - s : chunkc tiling::desktop --layout monocle
 f10 : chunkc tiling::desktop --layout monocle
 #ctrl + alt - d : chunkc tiling::desktop --layout float
+
+# debug window info
+test < f6 : chunkc tiling::query --desktop windows; skhd -k "alt - d"
+
+# clear border on screenshot
+cmd + shift - 4 -> : chunkc border::clear
 
 #ctrl + alt - w : chunkc tiling::desktop --deserialize ~/.chunkwm_layouts/dev_1
 #
