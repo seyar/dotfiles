@@ -22,7 +22,7 @@
     " Bundle 'git://github.com/rphillips/vim-zoomwin.git'
     Bundle 'git://github.com/mattn/emmet-vim.git'
     " TextMate-like snippets
-    Bundle 'git://github.com/vim-scripts/UltiSnips.git'
+    " Bundle 'git://github.com/vim-scripts/UltiSnips.git'
     " TextMate-like snippets
     " Bundle 'git://github.com/msanders/snipmate.vim.git'
     " Miripiruni's XSLT & CSS snippets

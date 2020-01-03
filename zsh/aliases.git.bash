@@ -4,7 +4,7 @@ alias gbd="git branch -D"
 alias gm="git merge --no-ff"
 alias gpt="git push --tags"
 alias gp="git push"
-alias gr='cd "`git rev-parse --show-toplevel`"'
+alias grp='cd "`git rev-parse --show-toplevel`"'
 
 alias gs='git status -s'
 alias пы='git status -s'
@@ -41,3 +41,5 @@ alias grba='git rebase --abort'
 alias gmc='git merge --continue'
 alias gma='git merge --abort'
 alias gms='git merge --squash'
+
+alias gr='git remote'

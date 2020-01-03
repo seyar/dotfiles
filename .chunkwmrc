@@ -22,7 +22,7 @@ chunkc core::log_file stdout
 #       - none, debug, profile, warn, error
 #
 
-chunkc core::log_level error
+chunkc core::log_level warn
 
 #
 # NOTE: specify the absolutepath to the directory to use when loading a plugin.
@@ -59,8 +59,13 @@ chunkc set global_desktop_offset_gap     1
 #
 # NOTE: syntax for desktop-specific settings
 #
-# chunkc set 2_desktop_mode                monocle
-chunkc set 5_desktop_mode                float
+chunkc set 1_desktop_mode                monocle
+chunkc set 2_desktop_mode                monocle
+chunkc set 3_desktop_mode                monocle
+# chunkc set 3_desktop_mode                float
+chunkc set 7_desktop_mode                float
+chunkc set 8_desktop_mode                float
+chunkc set 9_desktop_mode                float
 # chunkc set 3_desktop_offset_top          190
 # chunkc set 3_desktop_offset_bottom       190
 # chunkc set 3_desktop_offset_left         190
@@ -96,8 +101,8 @@ chunkc set preselect_border_width        5
 #
 
 chunkc set window_float_topmost          0
-chunkc set window_fade_inactive          1
-chunkc set window_fade_alpha             0.9
+chunkc set window_fade_inactive          0
+chunkc set window_fade_alpha             1
 chunkc set window_fade_duration          0.25
 chunkc set window_use_cgs_move           0
 
@@ -137,17 +142,19 @@ chunkc tiling::rule --owner Emacs --except "^$" --state tile &
 chunkc tiling::rule --owner \"System Preferences\" --subrole AXStandardWindow --state float &
 
 #Webstorm rules
-chunkc tiling::rule --owner WebStorm --state float &
-# chunkc tiling::rule --owner WebStorm --name "Go to Line\/Column" --state float &
-# chunkc tiling::rule --owner WebStorm --name "Preferences" --state float &
-# chunkc tiling::rule --owner WebStorm --name "Delete" --state float &
-# chunkc tiling::rule --owner WebStorm --name "New Directory" --state float &
-# chunkc tiling::rule --owner WebStorm --name "Choose Content to Paste" --state float &
-# chunkc tiling::rule --owner WebStorm --name "New File" --state float &
-# chunkc tiling::rule --owner WebStorm --name "Rename" --state float &
+# chunkc tiling::rule --owner WebStorm --state float &
+chunkc tiling::rule --owner WebStorm --name "Go to Line\/Column" --state float &
+chunkc tiling::rule --owner WebStorm --name "Preferences" --state float &
+chunkc tiling::rule --owner WebStorm --name "Delete" --state float &
+chunkc tiling::rule --owner WebStorm --name "New Directory" --state float &
+chunkc tiling::rule --owner WebStorm --name "Choose Content to Paste" --state float &
+chunkc tiling::rule --owner WebStorm --name "New File" --state float &
+chunkc tiling::rule --owner WebStorm --name "Rename" --state float &
 
 chunkc tiling::rule --owner \"Activity Monitor\" --state float &
-chunkc tiling::rule --owner \"MacPass\" --state float &
-chunkc tiling::rule --owner \"KeePassXC\" --state float &
-chunkc tiling::rule --owner \"Notion\" --state float &
+# chunkc tiling::rule --owner MacPass --state float &
+# chunkc tiling::rule --owner KeePassXC --state float &
+# chunkc tiling::rule --owner Notion --state float &
+# chunkc tiling::rule --owner Notes --state float &
+# chunkc tiling::rule --owner Skype --state float &
 

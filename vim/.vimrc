@@ -596,7 +596,7 @@ set nocompatible
     source ~/.dotfiles/vim/zen-coding.vim
 
 " UltiSnips
-    source ~/.dotfiles/vim/ulti-snips.vim
+  "source ~/.dotfiles/vim/ulti-snips.vim
 
 " VimWiki
     "    let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]
