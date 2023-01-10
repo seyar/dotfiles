@@ -19,7 +19,7 @@ set nocompatible
     filetype off     " required!
     set rtp+=~/.dotfiles/.vim/bundle/vundle/
     call vundle#rc()
-    Bundle 'git://github.com/gmarik/vundle.git'
+    Bundle 'https://github.com/VundleVim/Vundle.vim.git'
 
     source ~/.dotfiles/vim/plugins.vim
     
