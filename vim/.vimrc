@@ -22,7 +22,7 @@ set nocompatible
     Bundle 'https://github.com/VundleVim/Vundle.vim.git'
 
     source ~/.dotfiles/vim/plugins.vim
-    
+
     filetype plugin indent on     " required!
 
 " Interface
@@ -60,7 +60,7 @@ set nocompatible
     " Minimal number of lines to scroll when cursor gets off the screen
     " set scrolljump=5
     " Minimal number of lines to keep above and below the cursor
-    " Typewriter mode = keep current line in the center 
+    " Typewriter mode = keep current line in the center
     set scrolloff=999
     " Always show tabs
     " set showtabline=2
@@ -152,7 +152,7 @@ set nocompatible
     set number
     set numberwidth=3
     :highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-    
+
     let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " Status line
@@ -176,14 +176,14 @@ set nocompatible
     set laststatus=2
     " Content of the status line
     " Only available when compiled with the +statusline feature
-    set statusline=\ 
+    set statusline=\
     " Buffer number
-    set statusline+=%n:\ 
+    set statusline+=%n:\
     " File name
     set statusline+=%t
     " Modified flag
     set statusline+=%m
-    set statusline+=\ \ 
+    set statusline+=\ \
     " Paste mode flag
     set statusline+=%{&paste?'[paste]\ ':''}
     " File encoding
@@ -458,7 +458,7 @@ set nocompatible
 
     " <Space><Space>
         " Double space to ". "
-        " inoremap <Space><Space> . 
+        " inoremap <Space><Space> .
 
     " ,ts
         " Fix trailing white space
