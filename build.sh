@@ -102,6 +102,12 @@ echo "Add useful commands"
 mkdir -p ~/bin
 ln -sf ~/$DOTFILES_FOLDER/.bin/diffconflicts ~/bin
 
+echo "Add vscode settings"
+mkdir -p "$HOME/Library/Application\ Support/Code/User"
+cd "$HOME/Library/Application\ Support/Code/User"
+ln -snf $HOME/.dotfiles/vscode/snippets ./
+ln -snf $HOME/.dotfiles/vscode/keybindings.json ./
+
 # add tmux start config
 #ln -sf ~/$DOTFILES_FOLDER/.bin/tm ~/bin
 

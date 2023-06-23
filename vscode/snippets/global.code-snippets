@@ -1,0 +1,61 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	"to_console": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"prefix": "cl",
+		"body": [
+			"console.log(\"$1 = \", $1)",
+		],
+		"description": "Log output to console"
+	},
+	"console debug": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"prefix": "cd",
+		"body": [
+			"console.log(\"$TM_FILENAME_BASE:$TM_LINE_NUMBER = \", $1)",
+		],
+		"description": "Log debug to console"
+	},
+	"return": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"prefix": "rt",
+		"body": [
+			"return $0",
+		],
+		"description": "print return"
+	},
+	"function": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"prefix": "f",
+		"body": [
+			"function() {",
+			"  $0",
+			"}",
+		],
+		"description": "print function"
+	},
+	"arrow function": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"prefix": "()",
+		"body": [
+			"() => {",
+			"  $0",
+			"}",
+		],
+		"description": "print arrow function"
+	},
+	"import": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"prefix": "im",
+		"body": [
+			"import $1 from '$1'",
+		],
+		"description": "print import"
+	},
+}
