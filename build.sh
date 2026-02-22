@@ -49,8 +49,9 @@ done
 echo "Config setup is started..."
 echo
 
-read -p "Config builder wants to delete .bashrc .zshrc, .tmux.conf, .gitconfig, .vimrc and .vim. Do you want to continue? (y/n)? " REPLY
-[ "$REPLY" != "y" ] && exit
+# use expect or printf for yes/no prompt
+#read -p "Config builder wants to delete .bashrc .zshrc, .tmux.conf, .gitconfig, .vimrc and .vim. Do you want to continue? (y/n)? " REPLY
+#[ "$REPLY" != "y" ] && exit
 
 echo "Clean old config files..."
 clean
